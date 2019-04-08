@@ -13,7 +13,6 @@ app.use(express.static('public'));
 
 //Socket setup
 var io = socket(server);
-io.origins('https://www.differentServerDomain.fr:* https://www.differentServerDomain.fr/wp-admin/index.php:*');
 
 io.on('connection', function(socket){
     console.log("made socket connection",socket.id)
