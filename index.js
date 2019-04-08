@@ -12,7 +12,7 @@ app.use(express.static('public'));
 
 
 //Socket setup
-var io = socket(server);
+var io = socket(server, {origins:'domain.com:* http://domain.com:* http://www.domain.com:*'});
 
 io.on('connection', function(socket){
     console.log("made socket connection",socket.id)
