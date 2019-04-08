@@ -25,7 +25,7 @@ io.on('connection', function(socket){
         socket.broadcast.emit('typing', data);
     });
 
-    io.origins(['https://foo.example.com:443']);
+    io.origins(['https://stahlwalker.github.io/websockets/']);
 });
 
 // io.origins((origin, callback) => {
