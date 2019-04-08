@@ -25,3 +25,10 @@ io.on('connection', function(socket){
         socket.broadcast.emit('typing', data);
     });
 });
+
+io.origins((origin, callback) => {
+    if (origin !== 'https://stahlwalker.github.io/websockets/') {
+        return callback('origin not allowed', false);
+    }
+    callback(null, true);
+  });
