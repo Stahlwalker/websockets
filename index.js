@@ -12,7 +12,7 @@ app.use(express.static('public'));
 
 
 //Socket setup
-var io = socket(server, {origins:'domain.com:* http://domain.com:* http://www.domain.com:*'});
+var io = socket(server, {origins:'domain.com:* https://stahlwalker.github.io/websockets/:* https://stahlwalker.github.io/websockets/:*'});
 
 io.on('connection', function(socket){
     console.log("made socket connection",socket.id)
