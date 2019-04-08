@@ -12,7 +12,7 @@ app.use(express.static('public'));
 
 
 //Socket setup
-var io = socket(server, {origins:'domain.com:* https://stahlwalker.github.io/websockets/:* https://stahlwalker.github.io/websockets/:*'});
+var io = socket(server);
 
 io.on('connection', function(socket){
     console.log("made socket connection",socket.id)
@@ -24,6 +24,8 @@ io.on('connection', function(socket){
     socket.on('typing', function(data){
         socket.broadcast.emit('typing', data);
     });
+
+    io.origins(['https://foo.example.com:443']);
 });
 
 // io.origins((origin, callback) => {
