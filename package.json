@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/Stahlwalker/websockets/issues"
   },
-  "homepage": "https://github.com/Stahlwalker/websockets/public/index.html",
+  "homepage": "https://github.com/Stahlwalker/websockets",
   "dependencies": {
     "express": "^4.16.4",
     "socket.io": "^2.2.0"
